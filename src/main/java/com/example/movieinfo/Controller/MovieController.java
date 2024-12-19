@@ -39,7 +39,7 @@ public class MovieController {
     @PostMapping("register")
     public String registerService(MovieDTO movieDTO, MultipartFile imagefile){
         movieService.insert(movieDTO, imagefile);
-
+        log.info("테스트 로그 커밋용");
         return "redirect:/list";
     }
 
